@@ -4,7 +4,6 @@
  * main - main function found here
  *
  * Return: Always 0
- *
  */
 
 int main(void)
@@ -18,7 +17,7 @@ int main(void)
 		if (i != 9)
 		{
 			putchar(',');
-			putchar(',');
+			putchar(' ');
 		}
 	}
 
