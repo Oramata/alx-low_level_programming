@@ -3,19 +3,16 @@
 /**
  * _abs - function compute the absolute value of an integer.
  *
- * @n: The integer to compute the absolute value of.
+ * @a: The integer to compute the absolute value of.
  *
- * Return: The absolute value of the integer
+ * Return: always a
  */
 
-int _abs(int n)
+int _abs(int a)
 {
-	if (n < 0)
-	{
-		return (n);
-	}
-	else
-	{
-		return (n);
-	}
+	if (a < 0)
+		a = -(a);
+	else if (a >= 0)
+		a = a;
+	return (a);
 }
