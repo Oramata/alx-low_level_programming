@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * _puts - Prints a string to stdout
+ * _putchar - Writes a character to stdout
  *
- * @str: Pointer to string
+ * @c: The character to write.
+ *
+ * Return: On success, the character written. On error, -1 is returned.
  */
 
 int _putchar(char c);
