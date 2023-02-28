@@ -9,10 +9,13 @@
  * Return: Always 0
  */
 
+void puts2(char *str);
+
 int main(void)
 {
 	char *str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
 
 	puts2(str);
-	return (0);
+
+	return 0;
 }
