@@ -2,11 +2,10 @@
 
 /**
  * _strcat - The command concatenate two things
- * the using at most n bytes from src
  * @dest: input value
  * @src: input value
- * @n: input value
- * Return: dest
+ *
+ * Return: void
  */
 
 char *_strcat(char *dest, char *src)
@@ -15,6 +14,7 @@ char *_strcat(char *dest, char *src)
 	int j;
 
 	i = 0;
+
 	while (dest[i] != '\0')
 	{
 		i++;
