@@ -1,20 +1,14 @@
 #include "main.h"
 
 /**
- * _putchar - Writes a character to stdout
- *
- * @c: The character to write.
- *
- * Return: On success, the character written. On error, -1 is returned.
+ * _puts - prints a string, followed by a new line, to stdout
+ * @str: string to print
  */
-
-int _putchar(char c);
-
+void _puts(char *str)
 {
-	while (*str)
+	while (*str != '\0')
 	{
-		_putchar(*str);
-		str++;
+		_putchar(*str++);
 	}
-	_putchar('\n');
+		_putchar('\n');
 }
