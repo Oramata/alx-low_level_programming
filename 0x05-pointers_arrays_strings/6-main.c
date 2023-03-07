@@ -1,21 +1,15 @@
 #include "main.h"
 
 /**
- * main - prints a string of every other character
+ * main - check the code
  *
- * Description: calls put2 function to print every other charcter of a string,
- * starting with the first character, followed by a new line.
- *
- * Return: Always 0
+ * Return: Always 0.
  */
-
-void puts2(char *str);
-
 int main(void)
 {
-	char *str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+    char *str;
 
-	puts2(str);
-
-	return 0;
+    str = "0123456789";
+    puts2(str);
+    return (0);
 }
