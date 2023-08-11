@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * _realloc - a function that reallocates a memory block using malloc and free.
@@ -12,32 +13,32 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *new_ptr;
-	unsigned int i;
+	char *new_ptr;
+	char *old_ptr;
 
-	if (new_size == 0)
+	if (new_size == old_size)
+		return (ptr);
+
+	if (new_size == 0 && ptr)
 	{
 		free(ptr);
 		return (NULL);
 	}
 
-	if (ptr == NULL)
+	if (!ptr)
 		return (malloc(new_size));
 
-	if (new_size <= old_size)
-		return (ptr);
-
 	new_ptr = malloc(new_size);
-
-	if (new_ptr == NULL)
+	if (!new_ptr)
 		return (NULL);
 
-	for (i = 0; i < old_size && i < new_size; i++)
-	{
-		*((char *)new_ptr + i) = *((char *)ptr + i);
-	}
+	old_ptr = ptr;
+
+	if (new_size < old_size)
+		memcpy(new_ptr, old_ptr, new_size);
+	else
+		memcpy(new_ptr, old_ptr, old_size);
 
 	free(ptr);
-
 	return (new_ptr);
 }
